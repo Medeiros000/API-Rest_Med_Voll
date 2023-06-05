@@ -19,7 +19,6 @@ public class MedicoController {
     @Transactional
     public void cadastrar(@RequestBody @Valid DadosCadastroMedico dados){
         repository.save(new Medico(dados));
-        System.out.println("okok");
     }
     @GetMapping
     public Page<DadosListagemMedico> listar(@PageableDefault(size = 10, sort ={"nome"}) Pageable paginacao){
