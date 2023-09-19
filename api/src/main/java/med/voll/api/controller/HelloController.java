@@ -10,7 +10,8 @@ public class HelloController {
 
     @GetMapping
     public String ola() {
-        return "Hello There, Spring!!";
+        String resposta = ("<h1>Hello There, Spring!!</h1>");
+        return resposta;
     }
 
 }
