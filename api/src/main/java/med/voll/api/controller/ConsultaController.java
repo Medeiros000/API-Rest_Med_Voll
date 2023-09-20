@@ -3,6 +3,7 @@ package med.voll.api.controller;
 import jakarta.validation.Valid;
 import med.voll.api.domain.medico.Medico;
 import med.voll.api.domain.paciente.Paciente;
+import med.voll.api.dto.BuscaDto;
 import med.voll.api.dto.ConsultaDto;
 import med.voll.api.model.Consulta;
 import med.voll.api.response.ConsultaResponse;
@@ -12,7 +13,10 @@ import med.voll.api.service.PacienteService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -46,9 +50,28 @@ public class ConsultaController {
         return ResponseEntity.created(uri).body(consultaResponse);
     }
 
-    @GetMapping
-    public ResponseEntity<Page<Consulta>> listar(Pageable pageable){
-        var page = consultaService.listar(pageable);
-        return ResponseEntity.ok((Page<Consulta>) page);
+    @GetMapping("data")
+    public ResponseEntity<Page<ConsultaResponse>> buscarConsultas(@RequestBody @Valid BuscaDto buscaDto, @PageableDefault Pageable pageable){
+        System.out.println("Busca de Consulta pela data: "+ buscaDto.data());
+        Sort multiSort = Sort.by(
+                Sort.Order.asc("data"),
+                Sort.Order.asc("hora"));
+        pageable = PageRequest.of(pageable.getPageNumber(),pageable.getPageSize(), multiSort);
+        Page<Consulta> consultas = consultaService.buscarConsultaPorData(buscaDto.data(), pageable);
+        Page<ConsultaResponse> page = consultas.map(ConsultaResponse::new);
+        return ResponseEntity.ok(page);
     }
+
+    @GetMapping
+    public ResponseEntity<Page<ConsultaResponse>> listarConsultas(@PageableDefault Pageable pageable){
+        Sort multiSort = Sort.by(
+                Sort.Order.asc("data"),
+                Sort.Order.asc("hora"));
+        pageable = PageRequest.of(pageable.getPageNumber(),pageable.getPageSize(), multiSort);
+        Page<Consulta> consultas = consultaService.listarConsulta(pageable);
+        Page<ConsultaResponse> page = consultas.map(ConsultaResponse::new);
+        return ResponseEntity.ok(page);
+    }
+
+
 }

@@ -16,12 +16,12 @@ public class ConsultaResponse {
     private String status_consulta;
     private String observacoes;
     public ConsultaResponse(Consulta consulta) {
-        this.data = data;
-        this.hora = hora;
-        this.medico = medico;
-        this.especialidade = especialidade;
-        this.paciente = paciente;
-        this.status_consulta = status_consulta;
-        this.observacoes = observacoes;
+        this.data = consulta.getData();
+        this.hora = consulta.getHora();
+        this.medico = consulta.getMedico().getNome();
+        this.especialidade = String.valueOf(consulta.getMedico().getEspecialidade());
+        this.paciente = consulta.getPaciente().getNome();
+        this.status_consulta = String.valueOf(consulta.getStatus_consulta());
+        this.observacoes = consulta.getObservacoes();
     }
 }
