@@ -27,10 +27,14 @@ public class SecurityConfigurations {
         http.csrf(csrf -> csrf.disable())
                 .sessionManagement(sessionManagement -> sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers(CorsConfiguration.ALL).permitAll()
-                        .requestMatchers(HttpMethod.GET, "/hello").hasAnyRole("*")
-                        .requestMatchers(HttpMethod.POST, "/login").hasAnyRole("*")
+//                        .requestMatchers(CorsConfiguration.ALL).permitAll()
+                        .requestMatchers(HttpMethod.GET, "/hello").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/usuarios").hasAnyRole("*")
+                        .requestMatchers("css/style/**").permitAll()
+                        .requestMatchers("img/**").permitAll()
+                        .requestMatchers("js/**").permitAll()
+//                        .requestMatchers("css/style/**").hasAnyRole("*")
                         .anyRequest().authenticated()
                 );
         http.cors(Customizer.withDefaults());
