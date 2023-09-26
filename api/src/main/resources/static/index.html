@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="img/cruz.ico">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Clínica Voll Med</title>
+</head>
+<body>
+    <div class="json-container">
+        <h1 class="titulo">Clínica Voll Med</h1>
+    </div>
+    <div class="json-container">
+        <!-- Campo de busca -->
+        <label for="search">Pesquisar:</label>
+        <input type="text" id="search" placeholder="Digite sua pesquisa">
+
+        <!-- Opções de consulta -->
+        <select id="searchType">
+            <option value="">Selecione uma opção</option>
+            <option value="pacientes">Pacientes</option>
+            <option value="medicos">Médicos</option>
+            <option value="consultas">Consultas</option>
+        </select>
+
+        <!-- Resultados da pesquisa -->
+        <div id="results">
+            <!-- Os resultados da pesquisa serão exibidos aqui -->
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+</body>
+</html>

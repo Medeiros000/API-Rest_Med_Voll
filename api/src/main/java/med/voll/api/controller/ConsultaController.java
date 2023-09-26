@@ -35,7 +35,7 @@ public class ConsultaController {
     private PacienteService pacienteService;
 
     @PostMapping
-    public ResponseEntity marcar(@RequestBody @Valid ConsultaDto dados, UriComponentsBuilder uriBuilder){
+    public ResponseEntity<Object> marcar(@RequestBody @Valid ConsultaDto dados, UriComponentsBuilder uriBuilder){
         Optional<Medico> medicoOptional = medicoService.buscarMedicoPorId(dados.medico_id());
         Medico medico = medicoOptional.get();
         Optional<Paciente> pacienteOptional = pacienteService.buscarPacientePorId(dados.paciente_id());

@@ -31,10 +31,11 @@ public class SecurityConfigurations {
                         .requestMatchers(HttpMethod.GET, "/hello").permitAll()
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/usuarios").hasAnyRole("*")
-                        .requestMatchers("css/style/**").permitAll()
+                        .requestMatchers("css/**").permitAll()
                         .requestMatchers("img/**").permitAll()
                         .requestMatchers("js/**").permitAll()
-//                        .requestMatchers("css/style/**").hasAnyRole("*")
+                        .requestMatchers("/**").permitAll()
+                        .requestMatchers("index.html").permitAll()
                         .anyRequest().authenticated()
                 );
         http.cors(Customizer.withDefaults());

@@ -10,8 +10,8 @@ public class HelloView {
         htmlBuilder.append("<title>Clínica Voll Med</title>");
         htmlBuilder.append("<meta charset=\"utf-8\">");
         htmlBuilder.append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
-        htmlBuilder.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style/reset.css\">");
-        htmlBuilder.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style/style.css\">");
+        htmlBuilder.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/reset.css\">");
+        htmlBuilder.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\">");
         htmlBuilder.append("<link rel=\"icon\" href=\"/img/cruz.ico\" type=\"image/ico\">");
         htmlBuilder.append("</head>");
         htmlBuilder.append("<body>");
