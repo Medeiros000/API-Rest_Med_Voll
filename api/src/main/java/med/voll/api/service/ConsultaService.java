@@ -24,4 +24,8 @@ public class ConsultaService {
     public Page<Consulta> buscarConsultaPorData(String data, Pageable pageable) {
         return consultaRepository.findAllByData(data, pageable);
     }
+
+    public Page<Consulta> buscarConsultaPorTermo(String termo, Pageable pageable) {
+        return consultaRepository.findAllByStatus_consultaContainsIgnoreCase(termo, pageable);
+    }
 }

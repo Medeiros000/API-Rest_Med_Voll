@@ -3,8 +3,8 @@ package med.voll.api.controller;
 import jakarta.validation.Valid;
 import med.voll.api.domain.medico.Medico;
 import med.voll.api.domain.paciente.Paciente;
-import med.voll.api.dto.BuscaDto;
 import med.voll.api.dto.ConsultaDto;
+import med.voll.api.dto.ConsultaListagem;
 import med.voll.api.model.Consulta;
 import med.voll.api.response.ConsultaResponse;
 import med.voll.api.service.ConsultaService;
@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.Optional;
+
+import static org.springframework.data.domain.Sort.Direction.ASC;
 
 @RestController
 @RequestMapping("/consultas")
@@ -50,26 +52,34 @@ public class ConsultaController {
         return ResponseEntity.created(uri).body(consultaResponse);
     }
 
-    @GetMapping("data")
-    public ResponseEntity<Page<ConsultaResponse>> buscarConsultas(@RequestBody @Valid BuscaDto buscaDto, @PageableDefault Pageable pageable){
-        System.out.println("Busca de Consulta pela data: "+ buscaDto.data());
-        Sort multiSort = Sort.by(
-                Sort.Order.asc("data"),
-                Sort.Order.asc("hora"));
-        pageable = PageRequest.of(pageable.getPageNumber(),pageable.getPageSize(), multiSort);
-        Page<Consulta> consultas = consultaService.buscarConsultaPorData(buscaDto.data(), pageable);
-        Page<ConsultaResponse> page = consultas.map(ConsultaResponse::new);
-        return ResponseEntity.ok(page);
+//    @GetMapping("data")
+//    public ResponseEntity<Page<ConsultaResponse>> buscarConsultas(@RequestBody @Valid BuscaDto buscaDto, @PageableDefault Pageable pageable){
+//        System.out.println("Busca de Consulta pela data: "+ buscaDto.data());
+//        Sort multiSort = Sort.by(
+//                Sort.Order.asc("data"),
+//                Sort.Order.asc("hora"));
+//        pageable = PageRequest.of(pageable.getPageNumber(),pageable.getPageSize(), multiSort);
+//        Page<Consulta> consultas = consultaService.buscarConsultaPorData(buscaDto.data(), pageable);
+//        Page<ConsultaResponse> page = consultas.map(ConsultaResponse::new);
+//        return ResponseEntity.ok(page);
+//    }
+
+    @GetMapping("/{termo}")
+    public ResponseEntity<Object> buscarConsultas(@PathVariable String termo, @PageableDefault(sort = {"data","hora"}, direction = ASC) Pageable pageable){
+        System.out.println("Busca de Consulta pelo termo: "+ termo);
+        Page<Consulta> consultas = consultaService.buscarConsultaPorTermo(termo, pageable);
+        System.out.println("Listando consultas" + consultas.stream().toList());
+        Page<ConsultaListagem> page = consultas.map(ConsultaListagem::new);
+        page.stream().toList().forEach(System.out::println);
+        return ResponseEntity.ok(page.stream().toList());
     }
 
     @GetMapping
-    public ResponseEntity<Page<ConsultaResponse>> listarConsultas(@PageableDefault Pageable pageable){
-        Sort multiSort = Sort.by(
-                Sort.Order.asc("data"),
-                Sort.Order.asc("hora"));
-        pageable = PageRequest.of(pageable.getPageNumber(),pageable.getPageSize(), multiSort);
+    public ResponseEntity<Object> listarConsultas(@PageableDefault(sort = {"data","hora"}, direction = ASC) Pageable pageable){
         Page<Consulta> consultas = consultaService.listarConsulta(pageable);
-        Page<ConsultaResponse> page = consultas.map(ConsultaResponse::new);
+        System.out.println("Listando consultas" + consultas.stream().toList());
+        Page<ConsultaListagem> page = consultas.map(ConsultaListagem::new);
+        page.stream().toList().forEach(System.out::println);
         return ResponseEntity.ok(page);
     }
 
