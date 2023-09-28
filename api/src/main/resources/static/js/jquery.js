@@ -25,6 +25,10 @@ function doSearch() {
                         document.getElementById('results').appendChild(resultElement);
                     });
                 } else {
+                    // Exibir os resultados na página
+                    const resultElement = document.createElement('div');
+                    resultElement.textContent = JSON.stringify(data);
+                    document.getElementById('results').appendChild(resultElement);
                     console.error("Os dados da API não contêm um array 'content'.");
                 }
             })

@@ -64,4 +64,10 @@ public class PacienteController {
             return ResponseEntity.ok(page.stream().toList());
         }
     }
+
+    @GetMapping("/get/{id}")
+    public ResponseEntity<Object> buscar(@PathVariable Long id){
+        var paciente = service.findById(id);
+        return ResponseEntity.ok(new PacienteResponse(paciente));
+    }
 }

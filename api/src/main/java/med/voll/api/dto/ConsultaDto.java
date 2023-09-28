@@ -10,7 +10,7 @@ public record ConsultaDto(
         String especialidade,
         @NotNull
         Long paciente_id,
-        String status_consulta,
+        String andamento,
         String observacoes
 ) {
 }

@@ -2,8 +2,7 @@ package med.voll.api.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import med.voll.api.domain.medico.Medico;
-import med.voll.api.enums.StatusConsulta;
+import med.voll.api.enums.Andamento;
 
 @Table(name = "consultas")
 @Entity(name = "consulta")
@@ -25,6 +24,6 @@ public class Consulta {
     @ManyToOne
     private Paciente paciente;
     @Enumerated(EnumType.STRING)
-    public StatusConsulta status_consulta = StatusConsulta.AGENDADA;
+    public Andamento andamento = Andamento.AGENDADA;
     private String observacoes;
 }

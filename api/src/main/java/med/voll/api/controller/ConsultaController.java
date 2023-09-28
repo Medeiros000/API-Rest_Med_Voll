@@ -74,5 +74,12 @@ public class ConsultaController {
         return ResponseEntity.ok(page);
     }
 
+    @GetMapping("/get/{id}")
+    public ResponseEntity<Object> buscarConsultaPorId(@PathVariable Long id){
+        Consulta consulta = consultaService.buscarConsultaPorId(id);
+        ConsultaResponse consultaResponse = new ConsultaResponse(consulta);
+        return ResponseEntity.ok(consultaResponse);
+    }
+
 
 }

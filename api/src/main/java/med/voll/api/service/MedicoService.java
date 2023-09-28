@@ -1,13 +1,11 @@
 package med.voll.api.service;
 
-import med.voll.api.domain.medico.Medico;
+import med.voll.api.model.Medico;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import med.voll.api.repository.MedicoRepository;
-
-import java.util.Optional;
 
 @Service
 public class MedicoService {

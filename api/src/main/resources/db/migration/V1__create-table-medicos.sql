@@ -1,6 +1,5 @@
 create table medicos(
-
-    id bigint not null auto_increment,
+    id serial primary key,
     nome varchar(100) not null,
     email varchar(50) not null unique,
     crm varchar(6) not null unique,
@@ -13,8 +12,5 @@ create table medicos(
     uf char(2) not null,
     cidade varchar(50) not null,
     telefone varchar(20) not null,
-    ativo tinyint default 1,
-
-    primary key(id)
-
+    ativo boolean default true
 );

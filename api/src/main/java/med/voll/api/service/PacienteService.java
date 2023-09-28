@@ -22,7 +22,7 @@ public class PacienteService {
     }
 
     public Page<Paciente> findAllByNomeContains(String nome, Pageable paginacao) {
-        return pacienteRepository.findAllByNomeContains(nome, paginacao);
+        return pacienteRepository.findAllByNomeContainsIgnoreCase(nome, paginacao);
     }
 
     public Paciente findById(Long id) {
@@ -30,7 +30,7 @@ public class PacienteService {
     }
 
     public Page<Paciente> findAllByCpfStartingWith(String cpf, Pageable paginacao) {
-        return pacienteRepository.findAllByCpfStartingWith(cpf, paginacao);
+        return pacienteRepository.findAllByCpfStartingWithIgnoreCase(cpf, paginacao);
     }
 
     public void save(Paciente paciente) {

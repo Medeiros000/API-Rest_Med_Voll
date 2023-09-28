@@ -11,6 +11,6 @@ public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
     Page<Consulta> findAllByData(String data, Pageable pageable);
 
     @Query(nativeQuery = true,
-            value = "SELECT * FROM consultas WHERE status_consulta RLIKE :termo")
-    Page<Consulta> findAllByStatus_consultaContainsIgnoreCase(@Param("termo") String termo, Pageable pageable);
+            value = "SELECT * FROM consultas WHERE andamento LIKE '%' || :termo || '%'")
+    Page<Consulta> findAllByAndamentoContainsIgnoreCase(@Param("termo") String termo, Pageable pageable);
 }

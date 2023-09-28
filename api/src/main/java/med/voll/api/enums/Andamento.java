@@ -1,6 +1,6 @@
 package med.voll.api.enums;
 
-public enum StatusConsulta {
+public enum Andamento {
     AGENDADA,
     REALIZADA,
     CANCELADA,

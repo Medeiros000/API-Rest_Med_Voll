@@ -26,6 +26,10 @@ public class ConsultaService {
     }
 
     public Page<Consulta> buscarConsultaPorTermo(String termo, Pageable pageable) {
-        return consultaRepository.findAllByStatus_consultaContainsIgnoreCase(termo, pageable);
+        return consultaRepository.findAllByAndamentoContainsIgnoreCase(termo, pageable);
+    }
+
+    public Consulta buscarConsultaPorId(Long id) {
+        return consultaRepository.findById(id).orElseThrow();
     }
 }
