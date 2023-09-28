@@ -12,10 +12,10 @@ Enquanto um time de desenvolvimento será responsável pelo aplicativo mobile, o
 ## ⚙️ Funcionalidades
 
 - [x] CRUD de médicos;
-- [ ] CRUD de pacientes;
-- [ ] Agendamento de consultas(em breve);
-- [ ] Cancelamento de consultas(em breve);
-
+- [x] CRUD de pacientes;
+- [x] Agendamento de consultas;
+- [ ] Cancelamento de consultas (em breve));
+- [ ] ....
 ---
 
 ## 🎨 Layout
@@ -37,7 +37,8 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do proj
 - **[Java 17](https://www.oracle.com/java)**
 - **[Spring Boot 3](https://spring.io/projects/spring-boot)**
 - **[Maven](https://maven.apache.org)**
-- **[MySQL](https://www.mysql.com)**
+- **[MySQL](https://www.mysql.com)** (migrado para Postgresql)
+- **[PostgreSQL](https://www.postgresql.org)**
 - **[Hibernate](https://hibernate.org)**
 - **[Flyway](https://flywaydb.org)**
 - **[Lombok](https://projectlombok.org)**
