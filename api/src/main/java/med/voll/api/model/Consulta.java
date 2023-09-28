@@ -3,7 +3,6 @@ package med.voll.api.model;
 import jakarta.persistence.*;
 import lombok.*;
 import med.voll.api.domain.medico.Medico;
-import med.voll.api.domain.paciente.Paciente;
 import med.voll.api.enums.StatusConsulta;
 
 @Table(name = "consultas")

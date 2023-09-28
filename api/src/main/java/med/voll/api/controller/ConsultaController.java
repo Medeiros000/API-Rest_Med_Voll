@@ -1,10 +1,8 @@
 package med.voll.api.controller;
 
 import jakarta.validation.Valid;
-import med.voll.api.domain.medico.Medico;
-import med.voll.api.domain.paciente.Paciente;
 import med.voll.api.dto.ConsultaDto;
-import med.voll.api.dto.ConsultaListagem;
+import med.voll.api.response.ConsultaListagemResponse;
 import med.voll.api.model.Consulta;
 import med.voll.api.response.ConsultaResponse;
 import med.voll.api.service.ConsultaService;
@@ -13,15 +11,11 @@ import med.voll.api.service.PacienteService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.Optional;
 
 import static org.springframework.data.domain.Sort.Direction.ASC;
 
@@ -38,17 +32,16 @@ public class ConsultaController {
 
     @PostMapping
     public ResponseEntity<Object> marcar(@RequestBody @Valid ConsultaDto dados, UriComponentsBuilder uriBuilder){
-        Optional<Medico> medicoOptional = medicoService.buscarMedicoPorId(dados.medico_id());
-        Medico medico = medicoOptional.get();
-        Optional<Paciente> pacienteOptional = pacienteService.buscarPacientePorId(dados.paciente_id());
-        Paciente paciente = pacienteOptional.get();
+        var medico = medicoService.buscarMedicoPorId(dados.medico_id());
+        var paciente = pacienteService.buscarPacientePorId(dados.paciente_id());
         Consulta consulta = new Consulta();
         BeanUtils.copyProperties(dados, consulta);
         consulta.setMedico(medico);
         consulta.setPaciente(paciente);
         consultaService.marcar(consulta);
-        ConsultaResponse consultaResponse = new ConsultaResponse(consulta);
         var uri = uriBuilder.path("/consultas/{id}").buildAndExpand(consulta.getId()).toUri();
+        ConsultaResponse consultaResponse = new ConsultaResponse(consulta);
+
         return ResponseEntity.created(uri).body(consultaResponse);
     }
 
@@ -68,17 +61,15 @@ public class ConsultaController {
     public ResponseEntity<Object> buscarConsultas(@PathVariable String termo, @PageableDefault(sort = {"data","hora"}, direction = ASC) Pageable pageable){
         System.out.println("Busca de Consulta pelo termo: "+ termo);
         Page<Consulta> consultas = consultaService.buscarConsultaPorTermo(termo, pageable);
-        System.out.println("Listando consultas" + consultas.stream().toList());
-        Page<ConsultaListagem> page = consultas.map(ConsultaListagem::new);
-        page.stream().toList().forEach(System.out::println);
-        return ResponseEntity.ok(page.stream().toList());
+        System.out.println("Listando consultas" + consultas.stream().toList().stream().map(ConsultaListagemResponse::new).toList().toString());
+        consultas.stream().toList().forEach(System.out::println);
+        return ResponseEntity.ok(consultas.stream().map(ConsultaListagemResponse::new).toList());
     }
 
     @GetMapping
     public ResponseEntity<Object> listarConsultas(@PageableDefault(sort = {"data","hora"}, direction = ASC) Pageable pageable){
         Page<Consulta> consultas = consultaService.listarConsulta(pageable);
-        System.out.println("Listando consultas" + consultas.stream().toList());
-        Page<ConsultaListagem> page = consultas.map(ConsultaListagem::new);
+        Page<ConsultaListagemResponse> page = consultas.map(ConsultaListagemResponse::new);
         page.stream().toList().forEach(System.out::println);
         return ResponseEntity.ok(page);
     }

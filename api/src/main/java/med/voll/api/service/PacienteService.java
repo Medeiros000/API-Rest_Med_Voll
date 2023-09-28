@@ -1,14 +1,11 @@
 package med.voll.api.service;
 
-import med.voll.api.domain.paciente.Paciente;
+import med.voll.api.model.Paciente;
 import med.voll.api.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Range;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class PacienteService {
@@ -16,8 +13,8 @@ public class PacienteService {
     @Autowired
     private PacienteRepository pacienteRepository;
 
-    public Optional<Paciente> buscarPacientePorId(Long paciente_id) {
-        return pacienteRepository.findById(paciente_id);
+    public Paciente buscarPacientePorId(Long paciente_id) {
+        return pacienteRepository.findById(paciente_id).orElseThrow(()-> new RuntimeException("Paciente não encontrado"));
     }
 
     public void excluir(Long id) {
@@ -28,8 +25,8 @@ public class PacienteService {
         return pacienteRepository.findAllByNomeContains(nome, paginacao);
     }
 
-    public Paciente getReferenceById(Long id) {
-        return pacienteRepository.getReferenceById(id);
+    public Paciente findById(Long id) {
+        return pacienteRepository.findById(id).orElseThrow(() -> new RuntimeException("Paciente não encontrado"));
     }
 
     public Page<Paciente> findAllByCpfStartingWith(String cpf, Pageable paginacao) {

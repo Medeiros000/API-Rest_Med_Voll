@@ -25,7 +25,8 @@ public class MedicoController {
     @PostMapping
     @Transactional
     public ResponseEntity<Object> cadastrar(@RequestBody @Valid DadosCadastroMedico dados, UriComponentsBuilder uriBuilder){
-        var medico = new Medico(dados);
+        var medico = new Medico();
+        BeanUtils.copyProperties(dados, medico);
         service.salvarMedico(medico);
         var uri= uriBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
         return ResponseEntity.created(uri).body(new DadosDetalhamentoMedico(medico));
@@ -39,7 +40,7 @@ public class MedicoController {
     @PutMapping
     @Transactional
     public ResponseEntity<Object> atualizar(@RequestBody @Valid DadosAtualizacaoMedico dados){
-        var medico = service.buscarMedicoPorId(dados.id()).get();
+        var medico = service.buscarMedicoPorId(dados.id());
         BeanUtils.copyProperties(dados, medico);
         service.salvarMedico(medico);
         return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
@@ -55,10 +56,11 @@ public class MedicoController {
     public ResponseEntity<Object> buscar(@PathVariable String termo, Pageable paginacao){
         try {
             var crm = Long.parseLong(termo);
-            var page = service.buscarMedicoPorCrm(crm, paginacao).map(DadosListagemMedico::new);
             System.out.println("Buscando por id: " + crm);
+            var page = service.buscarMedicoPorCrm(crm, paginacao).map(DadosListagemMedico::new);
             return ResponseEntity.ok(page.stream().toList());
         } catch (NumberFormatException ignored) {
+            System.out.println("Buscando por termo: " + termo);
         }
         var page = service.procurarMedico(termo, paginacao).map(DadosListagemMedico::new);
         return ResponseEntity.ok(page.stream().toList());
