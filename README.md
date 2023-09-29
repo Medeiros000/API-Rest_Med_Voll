@@ -9,7 +9,7 @@ Enquanto um time de desenvolvimento será responsável pelo aplicativo mobile, o
 
 ---
 
-## 📝 NOTAS SOBRE O PROJETO
+## 📝 Notas sobre o Projeto
 
 Inicialmente era um projeto referente a um curso da Alura para aprender mais sobre Api's.
 Após algumas atualizações, que em grande parte são para testar conhecimentos adquiridos com o passar do tempo,
