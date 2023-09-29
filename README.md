@@ -9,12 +9,22 @@ Enquanto um time de desenvolvimento será responsável pelo aplicativo mobile, o
 
 ---
 
+## 📝 NOTAS SOBRE O PROJETO
+
+Inicialmente era um projeto referente a um curso da Alura para aprender mais sobre Api's.
+Após algumas atualizações, que em grande parte são para testar conhecimentos adquiridos com o passar do tempo,
+tenho visto como é grande a quantidade de conhecimento que somente foi deixada de lado enquanto ainda estava 
+aprendendo sobre Spring Boot.
+
+---
+
 ## ⚙️ Funcionalidades
 
 - [x] CRUD de médicos;
 - [x] CRUD de pacientes;
+- [ ] CRUD de consultas (em andamento);
 - [x] Agendamento de consultas;
-- [ ] Cancelamento de consultas (em breve));
+- [ ] Cancelamento de consultas (em breve);
 - [ ] ....
 ---
 
