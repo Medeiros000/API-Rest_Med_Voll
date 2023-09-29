@@ -19,7 +19,7 @@ aprendendo sobre Spring Boot.
 ---
 
 ## 🔎 Buscas (pg_trgm)
-  Após iniciar estudos sobre extensões de busca de texto no PostgreSQL acabei tenddo a curiosidade de implementar
+  Após iniciar estudos sobre extensões de busca de texto no PostgreSQL acabei tendo a curiosidade de implementar
 nesse projeto que me serve de base de estudo (assim como todos os que possuo nesse repositório).
   A extensão pg_trgm é uma extensão que auxilia o banco de dados em buscas por termos incompletos ou escritos
 com a grafia incorreta, retornando ou não a busca com um valor de acordo com seu nível de similaridade.
