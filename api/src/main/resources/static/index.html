@@ -3,33 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/ico" href="img/cruz.ico">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/ico" href="../img/cruz.ico">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
     <title>Clínica Voll Med</title>
 </head>
 <body>
-    <div class="json-container">
-        <h1 class="titulo">Clínica Voll Med</h1>
-    </div>
-    <div class="json-container">
-        <!-- Campo de busca -->
-        <label for="search">Pesquisar:</label>
-        <input type="text" id="search" placeholder="Digite sua pesquisa">
+    <div class="container">
+        <div class="voll">
+            <img src="../img/voll.svg" alt="voll">
+            <p class="">Gerenciando sua clínica</p>
+        </div>
+        <div class="menu">
+            <p>Escolha qual seção deseja iniciar</p>
+            
+            <div class="option">
+                <a href="../html/medicos.html"><img src="../img/medicos.svg" alt="medicos"></a>
+                <p>Médicos(as)</p>
+            </div>
 
-        <!-- Opções de consulta -->
-        <select id="searchType">
-            <option value="">Selecione uma opção</option>
-            <option value="pacientes">Pacientes</option>
-            <option value="medicos">Médicos</option>
-            <option value="consultas">Consultas</option>
-        </select>
+            <div class="option">
+                <a href="../html/pacientes.html"><img src="../img/pacientes.svg" alt="pacientes"></a>
+                <p>Pacientes</p>
+            </div>
 
-        <!-- Resultados da pesquisa -->
-        <div id="results">
-            <!-- Os resultados da pesquisa serão exibidos aqui -->
+            <div class="option">
+                <a href="../html/consultas.html"><img src="../img/calendar.svg" alt="consultas"></a>
+                <p>Consultas</p>
+            </div>
         </div>
     </div>
-    <script src="js/jquery.js"></script>
+<!--    <div class="json-container">-->
+<!--        &lt;!&ndash; Campo de busca &ndash;&gt;-->
+<!--        <label for="search">Pesquisar:</label>-->
+<!--        <input type="text" id="search" placeholder="Digite sua pesquisa">-->
+
+<!--        &lt;!&ndash; Opções de consulta &ndash;&gt;-->
+<!--        <select id="searchType">-->
+<!--            <option value="">Selecione uma opção</option>-->
+<!--            <option value="pacientes">Pacientes</option>-->
+<!--            <option value="medicos">Médicos</option>-->
+<!--            <option value="consultas">Consultas</option>-->
+<!--        </select>-->
+
+<!--        &lt;!&ndash; Resultados da pesquisa &ndash;&gt;-->
+<!--        <div id="results">-->
+<!--            &lt;!&ndash; Os resultados da pesquisa serão exibidos aqui &ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
+    <script src="../js/jquery.js"></script>
 </body>
 </html>

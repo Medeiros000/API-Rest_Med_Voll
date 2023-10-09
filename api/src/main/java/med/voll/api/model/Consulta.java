@@ -24,6 +24,6 @@ public class Consulta {
     @ManyToOne
     private Paciente paciente;
     @Enumerated(EnumType.STRING)
-    public Andamento andamento = Andamento.AGENDADA;
+    public Andamento andamento = Andamento.Agendada;
     private String observacoes;
 }

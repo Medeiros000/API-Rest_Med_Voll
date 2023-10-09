@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="88f6d9c5-be1d-4a84-9763-f7b3206f0133" name="Changes" comment="" />
+    <list default="true" id="88f6d9c5-be1d-4a84-9763-f7b3206f0133" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/API-Rest_Med_Voll.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/resources/static/img/calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/resources/static/img/medicos.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/resources/static/img/pacientes.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/resources/static/img/voll.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/resources/static/img/voll.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/med/voll/api/repository/ConsultaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/repository/ConsultaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/med/voll/api/repository/PacienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/repository/PacienteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/db/migration/V5__create-extension-pg-trgm.sql" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/db/migration/V5__create-extension-pg-trgm.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/static/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/static/js/jquery.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,27 +32,45 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2Vax3G8I8cDULq1940PBv1h6h9U" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jr/OneDrive/Documentos/GitHub/API-Rest_Med_Voll/api&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/medei/OneDrive/Documentos/GitHub/API-Rest_Med_Voll/api/src/main/java/med/voll/api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunAnythingContextRecentDirectoryCache">
+    <option name="paths">
+      <recentPaths value="$PROJECT_DIR$/api/src/main/java/med/voll/api" />
+    </option>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,10 +86,21 @@
       <workItem from="1695088014537" duration="212000" />
       <workItem from="1695346375381" duration="22000" />
       <workItem from="1695919038765" duration="22000" />
+      <workItem from="1696627771462" duration="378000" />
+      <workItem from="1696628162001" duration="266000" />
+      <workItem from="1696628437341" duration="513000" />
+      <workItem from="1696628960364" duration="61000" />
+      <workItem from="1696629028320" duration="665000" />
+      <workItem from="1696629697201" duration="45000" />
+      <workItem from="1696629750598" duration="244000" />
+      <workItem from="1696629998336" duration="47000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -13,6 +13,7 @@ function doSearch() {
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 // Verificar se 'data.content' é um array
                 if (Array.isArray(data.content)) {
                     // Limpar os resultados anteriores
@@ -21,13 +22,27 @@ function doSearch() {
                     // Exibir os resultados na página
                     data.content.forEach(result => {
                         const resultElement = document.createElement('div');
-                        resultElement.textContent = JSON.stringify(result);
+                        resultElement.className = "json-sub";
+                        for (var key in result ) {
+                            const p = document.createElement("p");
+                            p.className = "json-key";
+                            p.innerHTML = `<span class="json-key">${key}:</span> <span class="json-value">${result[key]}</span>`;
+                            resultElement.appendChild(p);
+                        }
+                        // resultElement.textContent = JSON.stringify(result);
                         document.getElementById('results').appendChild(resultElement);
                     });
                 } else {
                     // Exibir os resultados na página
                     const resultElement = document.createElement('div');
-                    resultElement.textContent = JSON.stringify(data);
+                    resultElement.className = "json-sub";
+                    for (var key in result ) {
+                        const p = document.createElement("p");
+                        p.className = "json-key";
+                        p.innerHTML = `<span class="json-key">${key}:</span> <span class="json-value">${result[key]}</span>`;
+                        resultElement.appendChild(p);
+                    }
+                    // resultElement.textContent = JSON.stringify(data);
                     document.getElementById('results').appendChild(resultElement);
                     console.error("Os dados da API não contêm um array 'content'.");
                 }
@@ -49,7 +64,15 @@ function doSearch() {
                 // Exibir os resultados na página
                 data.forEach(result => {
                     const resultElement = document.createElement('div');
-                    resultElement.textContent = JSON.stringify(result);
+                    resultElement.className = "json-sub";
+                    for (var key in result ) {
+                        const p = document.createElement("p");
+                        p.className = "json-key";
+                        p.innerHTML = `<span class="json-key">${key}:</span> <span class="json-value">${result[key]}</span>`;
+                        resultElement.appendChild(p);
+                    }
+                    // resultElement.textContent = JSON.stringify(result);
+                    console.log(resultElement);
                     document.getElementById('results').appendChild(resultElement);
                 });
             })
@@ -57,6 +80,18 @@ function doSearch() {
     }
 }
 
+function resultado(result){
+    const resultElement = document.createElement('div');
+    resultElement.className = "json-sub";
+    for (var key in result ) {
+        const p = document.createElement("p");
+        p.className = "json-key";
+        p.innerHTML = `<span class="json-key">${key}:</span> <span class="json-value">${result[key]}</span>`;
+        resultElement.appendChild(p);
+    }
+    // resultElement.textContent = JSON.stringify(result);
+    document.getElementById('results').appendChild(resultElement);
+}
 // Adicionar um ouvinte de eventos para o botão de pesquisa
 document.getElementById('search').addEventListener('input', doSearch);
 document.getElementById('searchType').addEventListener('change', doSearch);

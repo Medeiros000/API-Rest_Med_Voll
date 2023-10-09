@@ -7,6 +7,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import med.voll.api.repository.MedicoRepository;
 
+import java.util.List;
+
 @Service
 public class MedicoService {
 
@@ -29,8 +31,8 @@ public class MedicoService {
         repository.deleteById(id);
     }
 
-    public Page<Medico> findAllByAtivoTrue(Pageable paginacao) {
-        return repository.findAllByAtivoTrue(paginacao);
+    public List<Medico> findAllByAtivoTrue() {
+        return repository.findAllByAtivoTrueOrderByNome();
     }
 
     public Page<Medico> procurarMedico(String termo, Pageable paginacao) {
