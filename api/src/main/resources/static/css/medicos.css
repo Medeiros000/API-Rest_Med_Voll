@@ -1,89 +1,262 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap");
 
-body {    
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    padding: 20px;
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Public Sans", sans-serif;
+  background-color: #ffffff;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #ffffff;
-    padding: 20px;
-    height: 70vh;
-    width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px;
+  height: 70vh;
+  width: 80vw;
 }
+
 .voll {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #ffffff;
-    margin: 2em 0em 1em 0em;
-    width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  margin: 2em 0em 1em 0em;
+  width: 80vw;
 }
 
 .voll > img {
-    left: 0%;
-    margin: 0.5em 0em 0.5em;
-    width: 39vw;
+  left: 0%;
+  margin: 0.5em 0em 0.5em;
+  width: 39vw;
 }
 
 .voll > p {
-    font-family: Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.5em 0;
+  color: #0b3b60;
+}
+
+.containerLetra {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 80vw;
+}
+
+.json {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 80vw;
+}
+
+.jsonItem {
+  margin-bottom: 0.5em;
+}
+
+.jsonItem > p {
+  padding-top: 0.5em;
+}
+
+.jsonNome {
+  font: 1em "Public Sans", sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+
+.jsonTitulo {
+  font: 0.9em "Public Sans", sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+
+.jsonEndereco {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 1em;
+  padding-top: 0.5em;
+  color: #838383;
+}
+
+.divMedico,
+.divPaciente {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.5em 0 0.5em;
+  background-color: #ffffff;
+  width: 60vw;
+}
+
+.jsonCampos {
+  font-family: 0.9em "Public Sans", sans-serif;
+  font-weight: bold;
+  color: #838383;
+}
+
+.jsonCamposN {
+  font-family: 0.9em "Public Sans", sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+
+.letra {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  width: 80vw;
+}
+
+.letra > p {
+  font-family: Arial, sans-serif;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 0.5em 0;
+  color: #339cff;
+}
+
+.logo {
+  display: block;
+  align-self: center;
+  padding: 0.1em;
+  height: 1em;
+}
+
+.jsonResult {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: #f2f2f2;
+}
+
+.box {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* .fechar {
+    position: absolute;
+    top: 0;
+    right: 0;
     font-size: 1em;
-    font-weight: bold;
-    padding: 0.5em 0;
-    color: #0B3B60;
+    cursor: pointer;
+} */
+
+.fechar {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #00000000;
+  border: none;
 }
 
-.containerLetra{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #ffffff;
-    width: 80vw;
+.fechar:hover {
+  color: #ff0000;
+  background-color: #2108ff7e;
 }
 
-.medicos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #ffffff;
-    width: 80vw;
+.header {
+  position: fixed;
+  top: 0;
 }
 
-.medicoItem{
-    background-color: #ffffff;
-    margin: 0.5em 0;
+.headMenu {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 2em;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: #0b3b60;
 }
 
-.medicoNome{
-    font: 1.2em 'Public Sans', sans-serif;
-    font-weight: bold;
-    color: #000000;
+.headMenu > a {
+  font-size: 1.5em;
+  margin: 0.5em;
 }
 
-.medicoCampos{
-    font-family: 0.9em 'Public Sans', sans-serif;
-    font-weight: bold;
-    color: #838383;
+.headMenu > p {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: #fff;
 }
 
-.letra{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: #ffffff;
-    width: 80vw;
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.letra >p{
-    font-family: Arial, sans-serif;
-    font-size: 1.4em;
-    font-weight: bold;
-    padding: 0.5em 0;
-    color: #339CFF;
+.menu-nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
 }
 
+.menu-item {
+  color: #fcc;
+  padding: 3px;
+}
+
+.three-dots:after {
+  cursor: pointer;
+  color: #444;
+  content: "\2807";
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a div {
+  padding: 2px;
+}
+
+.dropdown {
+  position: absolute;
+  right: 10px;
+  background-color: #66d;
+
+  outline: none;
+  opacity: 0;
+  z-index: -1;
+  max-height: 0;
+  transition: opacity 0.1s, z-index 0.1s, max-height 5s;
+}
+
+.dropdown-container:focus {
+  outline: none;
+}
+
+.dropdown-container:focus .dropdown {
+  opacity: 1;
+  z-index: 100;
+  max-height: 100vh;
+  transition: opacity 0.2s, z-index 0.2s, max-height 0.2s;
+}

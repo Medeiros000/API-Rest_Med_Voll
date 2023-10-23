@@ -2,7 +2,10 @@ package med.voll.api.controller;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import med.voll.api.domain.medico.*;
+import med.voll.api.domain.medico.DadosAtualizacaoMedico;
+import med.voll.api.domain.medico.DadosCadastroMedico;
+import med.voll.api.domain.medico.DadosDetalhamentoMedico;
+import med.voll.api.domain.medico.DadosListagemMedico;
 import med.voll.api.model.Medico;
 import med.voll.api.service.MedicoService;
 import org.springframework.beans.BeanUtils;
@@ -30,22 +33,16 @@ public class MedicoController {
         var uri= uriBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
         return ResponseEntity.created(uri).body(new DadosDetalhamentoMedico(medico));
     }
-//    @GetMapping
-//    public ResponseEntity<Page<DadosListagemMedico>> listar(@PageableDefault(size = 10, sort ={"nome"}) Pageable paginacao){
-//        var page = service.findAllByAtivoTrue(paginacao).map(DadosListagemMedico::new);
-//        return ResponseEntity.ok(page);
-//    }
-
     @GetMapping
-    public ResponseEntity<Object> listar(){
-        var medicos = service.findAllByAtivoTrue();
-        return ResponseEntity.ok(medicos.stream());
+    public ResponseEntity<Page<DadosListagemMedico>> listar(@PageableDefault(size = 10, sort ={"nome"}) Pageable paginacao){
+        var page = service.findAllByAtivoTrue(paginacao).map(DadosListagemMedico::new);
+        return ResponseEntity.ok(page);
     }
 
     @PutMapping
     @Transactional
     public ResponseEntity<Object> atualizar(@RequestBody @Valid DadosAtualizacaoMedico dados){
-        var medico = service.buscarMedicoPorId(dados.id());
+        var medico = service.findById(dados.id());
         BeanUtils.copyProperties(dados, medico);
         service.salvarMedico(medico);
         return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
@@ -73,7 +70,7 @@ public class MedicoController {
 
     @GetMapping("/get/{id}")
     public ResponseEntity<Object> buscarPorId(@PathVariable Long id){
-        var medico = service.buscarMedicoPorId(id);
+        var medico = service.findById(id);
         return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
     }
 }

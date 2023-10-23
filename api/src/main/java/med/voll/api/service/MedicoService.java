@@ -23,7 +23,7 @@ public class MedicoService {
         return repository.findAllByCrmStartingWith(crm.toString(), paginacao);
     }
 
-    public Medico buscarMedicoPorId(Long id) {
+    public Medico findById(Long id) {
         return repository.findById(id).orElseThrow(() -> new RuntimeException("Medico não encontrado"));
     }
 
@@ -31,8 +31,8 @@ public class MedicoService {
         repository.deleteById(id);
     }
 
-    public List<Medico> findAllByAtivoTrue() {
-        return repository.findAllByAtivoTrueOrderByNome();
+    public Page<Medico> findAllByAtivoTrue(Pageable paginacao) {
+        return repository.findAllByAtivoTrueOrderByNome(paginacao);
     }
 
     public Page<Medico> procurarMedico(String termo, Pageable paginacao) {
