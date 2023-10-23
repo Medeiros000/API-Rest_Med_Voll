@@ -32,7 +32,7 @@ public class ConsultaController {
 
     @PostMapping
     public ResponseEntity<Object> marcar(@RequestBody @Valid ConsultaDto dados, UriComponentsBuilder uriBuilder){
-        var medico = medicoService.buscarMedicoPorId(dados.medico_id());
+        var medico = medicoService.findById(dados.medico_id());
         var paciente = pacienteService.buscarPacientePorId(dados.paciente_id());
         Consulta consulta = new Consulta();
         BeanUtils.copyProperties(dados, consulta);

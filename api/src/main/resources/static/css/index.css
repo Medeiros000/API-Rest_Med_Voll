@@ -1,12 +1,14 @@
 body {    
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    padding: 20px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    align-self: center;
     justify-content: space-between;
     background-color: #ffffff;
     padding: 20px;
@@ -51,6 +53,7 @@ body {
     font-size: 1em;
     padding: 0 2vw;
 }
+
 .option{
     display: flex;
     flex-direction: column;
@@ -67,15 +70,18 @@ body {
 .option > img {
     display: block;
     align-self: center;
-    padding: 20px;
-    height: 20vh;
-    width: 20vw;
+    padding: 0.5px;
+    height: 3em;
 }
 
 .option > p {
     font-family: Arial, sans-serif;
     font-size: 1em;
-    padding: 3vw;
+    padding: 0.5em;
     font-weight: bold;
     color: #ffffff;
+}
+
+a{
+    text-decoration: none;
 }
