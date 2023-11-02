@@ -1,7 +1,5 @@
 package med.voll.api.response;
 
-import lombok.Getter;
-import lombok.Setter;
 import med.voll.api.model.Consulta;
 
 public record ConsultaResponse( String data, String hora, String medico, String especialidade, String paciente, String andamento, String observacoes) {

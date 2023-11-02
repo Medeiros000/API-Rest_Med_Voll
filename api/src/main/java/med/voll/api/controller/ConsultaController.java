@@ -70,7 +70,7 @@ public class ConsultaController {
     public ResponseEntity<Object> listarConsultas(@PageableDefault(sort = {"data","hora"}, direction = ASC) Pageable pageable){
         Page<Consulta> consultas = consultaService.listarConsulta(pageable);
         Page<ConsultaListagemResponse> page = consultas.map(ConsultaListagemResponse::new);
-        page.stream().toList().forEach(System.out::println);
+//        page.stream().toList().forEach(System.out::println);
         return ResponseEntity.ok(page);
     }
 

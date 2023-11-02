@@ -19,7 +19,7 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @PostMapping
-    public ResponseEntity cadastrar(@RequestBody @Valid UsuarioDto usuarioDto, UriComponentsBuilder uriComponentsBuilder) {
+    public ResponseEntity<Object> cadastrar(@RequestBody @Valid UsuarioDto usuarioDto, UriComponentsBuilder uriComponentsBuilder) {
         var usuario = new Usuario();
         BeanUtils.copyProperties(usuarioDto, usuario);
         usuarioService.cadastrar(usuario);
