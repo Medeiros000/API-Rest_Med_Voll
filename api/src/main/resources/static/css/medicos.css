@@ -223,7 +223,7 @@ a {
 
 .three-dots:after {
   cursor: pointer;
-  color: #444;
+  color: #ffffff;
   content: "\2807";
   font-size: 20px;
   padding: 0 5px;
@@ -241,7 +241,7 @@ a div {
 .dropdown {
   position: absolute;
   right: 10px;
-  background-color: #66d;
+  background-color: #0b3b60;
 
   outline: none;
   opacity: 0;

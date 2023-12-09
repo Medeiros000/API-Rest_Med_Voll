@@ -33,6 +33,7 @@ function doSearch() {
         // Verificar se 'data.content' é um array
         if (Array.isArray(data.content)) {
             console.log("é array");
+            console.log("caminho certo")
             console.log(data.content);
             // Limpar os resultados anteriores
             resposta.innerHTML = "";
@@ -158,6 +159,15 @@ function closeDiv() {
   return fechar;
 }
 
+// Function to format the CEP
+function formatarCep(cep) {
+  if (cep.length === 8) {
+    return `${cep.slice(0, 2)}.${cep.slice(2, 5)}-${cep.slice(5)}`;
+  }
+  // Se o CEP não tiver 8 dígitos, retornar o valor original
+  return cep;
+}
+
 // Function to create the json result
 function createResult(result) {
   const jsonItem = document.createElement("div");
@@ -226,7 +236,8 @@ function createResult(result) {
   endereco.appendChild(pEndereco2);
 
   const pEndereco3 = document.createElement("p");
-  pEndereco3.innerHTML = "CEP: " + result.endereco.cep;
+  const cep = formatarCep(result.endereco.cep);
+  pEndereco3.innerHTML = "CEP: " + cep;
   endereco.appendChild(pEndereco3);
 
   jsonItem.appendChild(endereco);
