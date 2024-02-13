@@ -63,6 +63,12 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do proj
 
 ---
 
+## 📋 Diagrama de Entidade-Relecionamento do BD
+
+![Screenshot 2024-02-13 114132](https://github.com/Medeiros000/API-Rest_Med_Voll/assets/98979459/9691b87d-8351-4e1d-9fec-9e562549370a)
+
+---
+
 ## 📝 Licença
 
 Projeto desenvolvido por [Alura](https://www.alura.com.br) e utilizado nos cursos de Spring Boot.
