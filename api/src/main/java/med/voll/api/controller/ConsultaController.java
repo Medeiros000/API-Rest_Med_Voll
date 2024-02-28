@@ -60,10 +60,10 @@ public class ConsultaController {
     @GetMapping("/{termo}")
     public ResponseEntity<Object> buscarConsultas(@PathVariable String termo, @PageableDefault(sort = {"data","hora"}, direction = ASC) Pageable pageable){
         System.out.println("Busca de Consulta pelo termo: "+ termo);
-        Page<Consulta> consultas = consultaService.buscarConsultaPorTermo(termo, pageable);
-        System.out.println("Listando consultas" + consultas.stream().toList().stream().map(ConsultaListagemResponse::new).toList().toString());
+        Page<Consulta> consultas = consultaService.buscarConsultaPorData(termo, pageable);
+        Page<ConsultaListagemResponse> page = consultas.map(ConsultaListagemResponse::new);
         consultas.stream().toList().forEach(System.out::println);
-        return ResponseEntity.ok(consultas.stream().map(ConsultaListagemResponse::new).toList());
+        return ResponseEntity.ok(page);
     }
 
     @GetMapping
