@@ -11,7 +11,7 @@ public interface PacienteRepository extends JpaRepository<Paciente, Long> {
     Page<Paciente> findAllByAtivoTrue(Pageable paginacao);
 
     @Query(nativeQuery = true,
-            value = "SELECT * FROM vollmed_api.pacientes WHERE nome ILIKE '%' || (:nome) || '%'")
+            value = "SELECT * FROM vollmed_api.pacientes WHERE nome ILIKE '%' || (:nome) || '%' ORDER BY nome")
     Page<Paciente> findAllByNomeContainsIgnoreCase(@Param("nome") String nome, Pageable paginacao);
 
     Page<Paciente> findAllByCpfStartingWithIgnoreCase(String cpf, Pageable paginacao);

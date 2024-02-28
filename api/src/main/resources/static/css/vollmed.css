@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'PublicSans-Regular';
+  src: url('../fonts/PublicSans-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'PublicSans-Regular';
+  font-size: 1rem;
+}
+
+.voll img {
+  width: 10rem;
+}
+
+.titulo {
+  color: #0B3B60;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 1.125rem;
+
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.show {
+  border: 0.125rem solid #0B3B60;
+}
+
+li a {
+  font-size: 1.125rem;
+}
+
+.meio {
+  border-top: 0.125rem solid #0B3B60;
+  border-bottom: 0.125rem solid #0B3B60;
+}
+
+.extras p {
+  color: #6B6E71;
+  font-size: 1rem;
+  /* padding-top: 0;
+  padding-bottom: 0; */
+  margin-bottom: 0;
+}
+
+.consultas p:first-child {
+  font-size: 1.125rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.consultas p:nth-child(even) {
+  font-size: 1.125rem;
+  color: #000;
+}
+
+.accordion-button p:first-child {
+  font-size: 1.125rem;
+  color: #000;
+}
+
+.btnper {
+  padding: 0.4rem 0.3rem;
+  color: #0B3B60;
+  border: 0.125rem solid #0B3B60;
+  border-radius: 0.7rem;
+}
+
+.btnper:active {
+  background-color: #b3b2b2;
+  border: 0.125rem solid #b3b2b2;
+}
+
+/* .btnper:hover {
+  background-color: #b3b2b2;
+} */
+
+#results {
+  margin: 10rem 0;
+}

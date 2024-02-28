@@ -55,17 +55,17 @@ public class MedicoController {
         return ResponseEntity.noContent().build();
     }
     @GetMapping("/{termo}")
-    public ResponseEntity<Object> buscar(@PathVariable String termo, Pageable paginacao){
+    public ResponseEntity<Object> buscar(@PageableDefault(size = 30, sort ={"nome"}) @PathVariable String termo, Pageable paginacao){
         try {
             var crm = Long.parseLong(termo);
             System.out.println("Buscando por id: " + crm);
             var page = service.buscarMedicoPorCrm(crm, paginacao).map(DadosListagemMedico::new);
-            return ResponseEntity.ok(page.stream().toList());
+            return ResponseEntity.ok(page);
         } catch (NumberFormatException ignored) {
             System.out.println("Buscando por termo: " + termo);
         }
         var page = service.procurarMedico(termo, paginacao).map(DadosListagemMedico::new);
-        return ResponseEntity.ok(page.stream().toList());
+        return ResponseEntity.ok(page);
     }
 
     @GetMapping("/get/{id}")

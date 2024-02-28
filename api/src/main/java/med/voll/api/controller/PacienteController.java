@@ -56,11 +56,11 @@ public class PacienteController {
             Long id = Long.valueOf(termo);
             var page = service.findAllByCpfStartingWith(id.toString(), paginacao).map(DadosListagemPaciente::new);
             page.stream().toList().forEach(System.out::println);
-            return ResponseEntity.ok(page.stream().toList());
+            return ResponseEntity.ok(page);
         } catch (NumberFormatException e) { // Lida com exceção de conversão para Long e busca por nome
             var page = service.findAllByNomeContains(termo, paginacao).map(DadosListagemPaciente::new);
             page.stream().toList().forEach(System.out::println);
-            return ResponseEntity.ok(page.stream().toList());
+            return ResponseEntity.ok(page);
         }
     }
 

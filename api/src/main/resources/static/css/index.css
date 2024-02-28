@@ -12,7 +12,6 @@ body {
     justify-content: space-between;
     background-color: #ffffff;
     padding: 20px;
-    height: 70vh;
     width: 80vw;
 }
 .voll {
@@ -71,12 +70,12 @@ body {
     display: block;
     align-self: center;
     padding: 0.5px;
-    height: 3em;
+    height: 12vw;
 }
 
 .option > p {
     font-family: Arial, sans-serif;
-    font-size: 1em;
+    font-size: 3vw;
     padding: 0.5em;
     font-weight: bold;
     color: #ffffff;

@@ -1,39 +1,72 @@
-<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/ico" href="../img/cruz.ico" />
-    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="../css/medicos.css" />
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="../img/cruz.ico">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/vollmed.css">
     <title>Clínica Voll Med</title>
-  </head>
-  <body>
-    <nav id="header">
-      <div class="headMenu">
-        <a href="../html/index.html"><</a>
-        <p>Pacientes</p>
-        <div class="menu-nav">
-          <div class="dropdown-container" tabindex="-1">
-            <div class="three-dots"></div>
-            <div class="dropdown">
-              <a href="medicos.html"><div>Médicos</div></a>
-              <a href="pacientes.html"><div>Pacientes</div></a>
-              <a href="consultas.html"><div>Consultas</div></a>
+</head>
+
+<body>
+    <header class="fixed-top mt-0 pt-0 bg-white">
+        <div style="background-color: #0B3B60; height: 3.5rem;" class="text-white d-inline-flex col-12 py-2 px-2">
+            <a href="/" class="text-white text-decoration-none text-start col-1 my-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill="currentColor"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+            </a>
+
+            <p class="col-3 px-2 my-auto">Pacientes</p>
+
+            <div class="dropstart col-8 text-end">
+                <button type="button" style="content: none;" class="btn btn-secondary" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                        <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                    </svg>
+                </button>
+                <ul class="dropdown-menu py-0 text-center">
+                    <li><a class="dropdown-item py-2 rounded-top" href="../html/medicos.html">Médicos</a></li>
+                    <li><a class="dropdown-item py-2 meio" href="../html/pacientes.html">Pacientes</a></li>
+                    <li><a class="dropdown-item py-2 rounded-bottom" href="../html/consultas.html">Consultas</a></li>
+                </ul>
             </div>
-          </div>
         </div>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="voll">
-        <img src="../img/voll.svg" alt="voll" />
-        <p class="">Gerenciando sua clínica</p>
-      </div>
-      <div id="jsonResult"></div>
-      <div id="results"></div>
-    </div>
-    <script src="../js/pacientes.js"></script>
-  </body>
+        <div style="height: 5rem;" class="container pt-3 bg-white">
+            <form class="d-inline-flex w-100 px-2 py-2 border border-1 border-dark-subtle rounded my-auto bg-white"
+                role="search">
+                <input type="text" id="search" class="form-control border-0" placeholder="Pesquisar" aria-label="Search">
+                <span class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </span>
+            </form>
+        </div>
+    </header>
+    <!-- End of the header -->
+
+    
+    <!-- Construindo a página de médicos... -->
+    <div id="results" class="pt-3 px-3"></div>
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="../js/script.js"></script> -->
+<script src="../js/jquery.js"></script>
+</body>
 </html>

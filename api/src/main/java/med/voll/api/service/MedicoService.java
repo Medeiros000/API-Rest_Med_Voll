@@ -35,7 +35,7 @@ public class MedicoService {
 
     public Page<Medico> procurarMedico(String termo, Pageable paginacao) {
         System.out.println("Buscando por: " + termo);
-        return repository.findAllByEspecialidadeIsContainingOrNomeContaining(termo, termo, paginacao);
+        return repository.findAllByEspecialidadeIsContainingIgnoreCaseOrNomeContainingIgnoreCaseOrderByNome(termo, termo, paginacao);
     }
 
 }

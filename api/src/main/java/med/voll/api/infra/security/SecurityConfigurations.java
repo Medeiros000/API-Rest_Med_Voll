@@ -30,6 +30,8 @@ public class SecurityConfigurations {
                         .requestMatchers(HttpMethod.GET, "/hello").permitAll()
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/usuarios").hasAnyRole("*")
+                        .requestMatchers(HttpMethod.GET, "/medicos").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/pacientes").permitAll()
                         .requestMatchers("css/**").permitAll()
                         .requestMatchers("img/**").permitAll()
                         .requestMatchers("js/**").permitAll()
