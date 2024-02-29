@@ -34,10 +34,10 @@ function doSearch(searchTerm) {
   if (searchTerm == null || searchTerm == "") {
     // Se estiver vazio, faça uma chamada à API para obter todos os resultados
     // Substitua a URL abaixo pela URL real da sua API
-    apiUrl = `https://api.vercel.app/voll-med/${currentPage}`;
+    apiUrl = `http://192.168.1.103:8080/${currentPage}`;
   } else {
     // Se não estiver vazio, faça uma chamada à API para obter os resultados filtrados
-    apiUrl = `https://voll-med.vercel.app/${currentPage}/${searchTerm}`;
+    apiUrl = `http://192.168.1.103:8080/${currentPage}/${searchTerm}`;
   }
   // console.log(apiUrl);
   // Fazer a chamada à API usando fetch
