@@ -34,10 +34,10 @@ function doSearch(searchTerm) {
   if (searchTerm == null || searchTerm == "") {
     // Se estiver vazio, faça uma chamada à API para obter todos os resultados
     // Substitua a URL abaixo pela URL real da sua API
-    apiUrl = `https://voll-med-medeiros000s-projects.vercel.app/html/${currentPage}`;
+    apiUrl = `https://voll-med-medeiros000s-projects.vercel.app/${currentPage}`;
   } else {
     // Se não estiver vazio, faça uma chamada à API para obter os resultados filtrados
-    apiUrl = `https://voll-med-medeiros000s-projects.vercel.app/html/${currentPage}/${searchTerm}`;
+    apiUrl = `https://voll-med-medeiros000s-projects.vercel.app/${currentPage}/${searchTerm}`;
   }
   // console.log(apiUrl);
   // Fazer a chamada à API usando fetch
