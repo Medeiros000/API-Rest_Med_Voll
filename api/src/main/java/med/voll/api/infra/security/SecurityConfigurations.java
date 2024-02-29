@@ -39,13 +39,7 @@ public class SecurityConfigurations {
                         .requestMatchers("index.html").permitAll()
                         .anyRequest().authenticated()
                 );
-        http.cors(CorsConfiguration -> CorsConfiguration.configurationSource(request -> {
-            var cors = new org.springframework.web.cors.CorsConfiguration();
-            cors.addAllowedOrigin("*");
-            cors.addAllowedMethod("*");
-            cors.addAllowedHeader("*");
-            return cors;
-        }));
+        http.cors(Customizer.withDefaults());
 
         http.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class);
 
