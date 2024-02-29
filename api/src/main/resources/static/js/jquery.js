@@ -34,7 +34,7 @@ function doSearch(searchTerm) {
   if (searchTerm == null || searchTerm == "") {
     // Se estiver vazio, faça uma chamada à API para obter todos os resultados
     // Substitua a URL abaixo pela URL real da sua API
-    apiUrl = `api.vercel.app/${currentPage}`;
+    apiUrl = `https://api.vercel.app/voll-med/${currentPage}`;
   } else {
     // Se não estiver vazio, faça uma chamada à API para obter os resultados filtrados
     apiUrl = `https://voll-med.vercel.app/${currentPage}/${searchTerm}`;
