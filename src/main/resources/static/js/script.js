@@ -21,7 +21,7 @@ function doSearch() {
     if (searchTerm === "" && currentPage !== "") {
         // Se estiver vazio, faça uma chamada à API para obter todos os resultados
         // Substitua a URL abaixo pela URL real da sua API
-        let apiUrl = `https://api-rest-med-voll.onrender.com//${currentPage}`;
+        let apiUrl = `https://api-rest-med-voll.onrender.com/${currentPage}`;
         // Fazer a chamada à API usando fetch
         $.getJSON(apiUrl, function (data) {
             // Verificar se 'data.content' é um array

@@ -34,10 +34,10 @@ function doSearch(searchTerm) {
   if (searchTerm == null || searchTerm == "") {
     // Se estiver vazio, faça uma chamada à API para obter todos os resultados
     // Substitua a URL abaixo pela URL real da sua API
-    apiUrl = `http://192.168.1.103:8080/${currentPage}`;
+    apiUrl = `https://api-rest-med-voll.onrender.com/${currentPage}`;
   } else {
     // Se não estiver vazio, faça uma chamada à API para obter os resultados filtrados
-    apiUrl = `http://192.168.1.103:8080/${currentPage}/${searchTerm}`;
+    apiUrl = `https://api-rest-med-voll.onrender.com/${searchTerm}`;
   }
   // console.log(apiUrl);
   // Fazer a chamada à API usando fetch
