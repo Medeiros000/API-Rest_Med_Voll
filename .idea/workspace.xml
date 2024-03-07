@@ -4,41 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88f6d9c5-be1d-4a84-9763-f7b3206f0133" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/API-Rest_Med_Voll.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/static/img/calendar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/static/img/medicos.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/static/img/pacientes.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/static/img/voll.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/static/img/voll.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/med/voll/api/repository/ConsultaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/repository/ConsultaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/med/voll/api/repository/PacienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/med/voll/api/repository/PacienteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/db/migration/V5__create-extension-pg-trgm.sql" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/db/migration/V5__create-extension-pg-trgm.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/static/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/static/js/jquery.js" afterDir="false" />
-    </list>
+    <list default="true" id="a7c8885d-816c-49eb-b52a-13e99dc75e4d" name="Changes" comment="vercel cors" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2Vax3G8I8cDULq1940PBv1h6h9U" />
+  <component name="ProjectId" id="2ZYJW4wzYwXtSKvkXOFBc9X3eMy" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -49,52 +37,157 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api [package].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;Spring Boot.MedVollApi.executor&quot;: &quot;Run&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/medei/OneDrive/Documentos/GitHub/API-Rest_Med_Voll/api/src/main/java/med/voll/api&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/medei/OneDrive/Documentos/GitHub/API-Rest_Med_Voll/api&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.23522596&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
-  <component name="RunAnythingContextRecentDirectoryCache">
-    <option name="paths">
-      <recentPaths value="$PROJECT_DIR$/api/src/main/java/med/voll/api" />
-    </option>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\medei\OneDrive\Documentos\GitHub\API-Rest_Med_Voll\api" />
+      <recent name="C:\Users\medei\OneDrive\Documentos\GitHub\API-Rest_Med_Voll\api\src\main\resources\static\img" />
+      <recent name="C:\Users\medei\OneDrive\Documentos\GitHub\API-Rest_Med_Voll\api\src\main\resources\static\js" />
+      <recent name="C:\Users\medei\OneDrive\Documentos\GitHub\API-Rest_Med_Voll\api\src\main\resources\static\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\medei\OneDrive\Documentos\GitHub\API-Rest_Med_Voll\api\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.Dockerfile">
+    <configuration name="MedVollApi" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="med.voll.api.MedVollApi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="voll-med:latest" />
+          <option name="containerName" value="voll-med" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-jbrsdk-17.0.9-3183f394aec4-e58e3a3e" />
+        <option value="jdk-17.0.9-jbrsdk-17.0.9-4caba194b151-b614c381" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="88f6d9c5-be1d-4a84-9763-f7b3206f0133" name="Changes" comment="" />
-      <created>1695087792063</created>
+      <changelist id="a7c8885d-816c-49eb-b52a-13e99dc75e4d" name="Changes" comment="" />
+      <created>1702593108166</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695087792063</updated>
-      <workItem from="1695087793301" duration="125000" />
-      <workItem from="1695087923460" duration="48000" />
-      <workItem from="1695087978302" duration="7000" />
-      <workItem from="1695088000323" duration="4000" />
-      <workItem from="1695088014537" duration="212000" />
-      <workItem from="1695346375381" duration="22000" />
-      <workItem from="1695919038765" duration="22000" />
-      <workItem from="1696627771462" duration="378000" />
-      <workItem from="1696628162001" duration="266000" />
-      <workItem from="1696628437341" duration="513000" />
-      <workItem from="1696628960364" duration="61000" />
-      <workItem from="1696629028320" duration="665000" />
-      <workItem from="1696629697201" duration="45000" />
-      <workItem from="1696629750598" duration="244000" />
-      <workItem from="1696629998336" duration="47000" />
+      <updated>1702593108166</updated>
+      <workItem from="1702593109622" duration="403000" />
+      <workItem from="1702593525748" duration="212000" />
+      <workItem from="1702594054539" duration="83000" />
+      <workItem from="1702594465149" duration="330000" />
+      <workItem from="1703267487720" duration="81000" />
+      <workItem from="1703942901583" duration="15000" />
+      <workItem from="1703943010296" duration="18000" />
+      <workItem from="1704123723164" duration="130000" />
+      <workItem from="1704123898612" duration="3043000" />
+      <workItem from="1704134066517" duration="28000" />
+      <workItem from="1704300602098" duration="56000" />
+      <workItem from="1705095054266" duration="3000" />
+      <workItem from="1705518271899" duration="10000" />
+      <workItem from="1705790306851" duration="27000" />
+      <workItem from="1705790346507" duration="13000" />
+      <workItem from="1705936270713" duration="401000" />
+      <workItem from="1705972702855" duration="91000" />
+      <workItem from="1705972802505" duration="159000" />
+      <workItem from="1706486944268" duration="73000" />
+      <workItem from="1706487086251" duration="905000" />
+      <workItem from="1706921917433" duration="109000" />
+      <workItem from="1706922039184" duration="29000" />
+      <workItem from="1707178198908" duration="602000" />
+      <workItem from="1707586621657" duration="42000" />
+      <workItem from="1707782941595" duration="108000" />
+      <workItem from="1707783059751" duration="1913000" />
+      <workItem from="1707834956600" duration="45000" />
+      <workItem from="1707835086691" duration="7118000" />
+      <workItem from="1707846131988" duration="8302000" />
+      <workItem from="1707919376677" duration="251000" />
+      <workItem from="1707919682028" duration="2112000" />
+      <workItem from="1707921819118" duration="945000" />
+      <workItem from="1708136267610" duration="45000" />
+      <workItem from="1708186598509" duration="95000" />
+      <workItem from="1708782613168" duration="7000" />
+      <workItem from="1708895286368" duration="962000" />
+      <workItem from="1708919384305" duration="603000" />
+      <workItem from="1708964944296" duration="2191000" />
+      <workItem from="1708981423809" duration="1740000" />
+      <workItem from="1709047996542" duration="1055000" />
+      <workItem from="1709064063515" duration="10016000" />
+      <workItem from="1709135154898" duration="2370000" />
+      <workItem from="1709138455359" duration="1377000" />
+      <workItem from="1709152690905" duration="12610000" />
+      <workItem from="1709238961332" duration="3425000" />
+      <workItem from="1709243693394" duration="172000" />
+      <workItem from="1709243937498" duration="1056000" />
+      <workItem from="1709252281628" duration="26000" />
+      <workItem from="1709675676342" duration="3515000" />
+      <workItem from="1709679786831" duration="1261000" />
+      <workItem from="1709764182599" duration="28000" />
+      <workItem from="1709764221561" duration="12236000" />
     </task>
+    <task id="LOCAL-00001" summary="vercel cors">
+      <option name="closed" value="true" />
+      <created>1709242885517</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709242885517</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,5 +195,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="vercel cors" />
+    <option name="LAST_COMMIT_MESSAGE" value="vercel cors" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
