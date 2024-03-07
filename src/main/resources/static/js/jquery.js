@@ -37,7 +37,7 @@ function doSearch(searchTerm) {
     apiUrl = `https://api-rest-med-voll.onrender.com/${currentPage}`;
   } else {
     // Se não estiver vazio, faça uma chamada à API para obter os resultados filtrados
-    apiUrl = `https://api-rest-med-voll.onrender.com/${searchTerm}`;
+    apiUrl = `https://api-rest-med-voll.onrender.com/${currentPage}/${searchTerm}`;
   }
   // console.log(apiUrl);
   // Fazer a chamada à API usando fetch
