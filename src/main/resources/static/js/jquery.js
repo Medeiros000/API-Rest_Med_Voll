@@ -29,15 +29,15 @@ var resposta = $("#results");
 function doSearch(searchTerm) {
   // let searchTerm = "";
   // console.log(searchTerm);
-  var apiUrl = "";
+  var apiUrl = window.env && window.env.API_BASE_URL ? window.env.API_BASE_URL : "http://localhost:8080";
   // Verificar se o campo de pesquisa está vazio e o tipo de pesquisa selecionado não é vazio
   if (searchTerm == null || searchTerm == "") {
     // Se estiver vazio, faça uma chamada à API para obter todos os resultados
     // Substitua a URL abaixo pela URL real da sua API
-    apiUrl = `https://api-rest-med-voll.onrender.com/${currentPage}`;
+    apiUrl = `${apiBaseUrl}/${currentPage}`;
   } else {
     // Se não estiver vazio, faça uma chamada à API para obter os resultados filtrados
-    apiUrl = `https://api-rest-med-voll.onrender.com/${currentPage}/${searchTerm}`;
+    apiUrl = `${apiBaseUrl}/${currentPage}/${searchTerm}`;
   }
   // console.log(apiUrl);
   // Fazer a chamada à API usando fetch
