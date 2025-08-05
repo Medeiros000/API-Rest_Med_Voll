@@ -29,7 +29,8 @@ var resposta = $("#results");
 function doSearch(searchTerm) {
   // let searchTerm = "";
   // console.log(searchTerm);
-  var apiUrl = window.env && window.env.API_BASE_URL ? window.env.API_BASE_URL : "http://localhost:8080";
+  const apiBaseUrl = window.env && window.env.API_BASE_URL ? window.env.API_BASE_URL : "http://localhost:8080";
+  var apiUrl = "";
   // Verificar se o campo de pesquisa está vazio e o tipo de pesquisa selecionado não é vazio
   if (searchTerm == null || searchTerm == "") {
     // Se estiver vazio, faça uma chamada à API para obter todos os resultados
