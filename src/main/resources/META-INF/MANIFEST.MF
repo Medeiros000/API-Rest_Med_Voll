@@ -1,3 +1,37 @@
 Manifest-Version: 1.0
 Main-Class: med.voll.api.MedVollApi
+Class-Path: jaxb-core-4.0.2.jar jackson-module-parameter-names-2.15.0.ja
+ r spring-boot-starter-jdbc-3.1.0.jar spring-tx-6.0.9.jar spring-express
+ ion-6.0.9.jar jaxb-runtime-4.0.2.jar spring-web-6.0.9.jar hibernate-val
+ idator-8.0.0.Final.jar jackson-datatype-jdk8-2.15.0.jar spring-boot-aut
+ oconfigure-3.1.0.jar jakarta.persistence-api-3.1.0.jar logback-classic-
+ 1.4.7.jar log4j-api-2.20.0.jar jul-to-slf4j-2.0.7.jar spring-boot-start
+ er-data-jpa-3.1.0.jar jakarta.xml.bind-api-4.0.0.jar byte-buddy-1.14.4.
+ jar spring-security-config-6.1.0.jar thymeleaf-spring6-3.1.1.RELEASE.ja
+ r jboss-logging-3.5.0.Final.jar spring-aspects-6.0.9.jar flyway-core-9.
+ 16.3.jar postgresql-42.6.0.jar spring-boot-starter-security-3.1.0.jar s
+ pring-security-crypto-6.1.0.jar spring-jcl-6.0.9.jar spring-boot-starte
+ r-aop-3.1.0.jar jakarta.validation-api-3.0.2.jar spring-boot-starter-th
+ ymeleaf-3.1.0.jar lombok-1.18.26.jar angus-activation-2.0.0.jar spring-
+ boot-starter-3.1.0.jar jakarta.activation-api-2.1.2.jar spring-jdbc-6.0
+ .9.jar jakarta.inject-api-2.0.1.jar spring-boot-starter-web-3.1.0.jar s
+ pring-boot-starter-tomcat-3.1.0.jar classmate-1.5.1.jar spring-aop-6.0.
+ 9.jar unbescape-1.1.6.RELEASE.jar thymeleaf-3.1.1.RELEASE.jar antlr4-ru
+ ntime-4.10.1.jar jackson-databind-2.15.0.jar aspectjweaver-1.9.19.jar s
+ pring-boot-devtools-3.1.0.jar spring-boot-3.1.0.jar jandex-3.0.5.jar sp
+ ring-boot-starter-json-3.1.0.jar hibernate-core-6.2.2.Final.jar jakarta
+ .transaction-api-2.0.1.jar tomcat-embed-el-10.1.8.jar spring-beans-6.0.
+ 9.jar java-jwt-4.2.1.jar tomcat-embed-websocket-10.1.8.jar txw2-4.0.2.j
+ ar spring-webmvc-6.0.9.jar jackson-annotations-2.15.0.jar jackson-dataf
+ ormat-toml-2.15.0.jar hibernate-commons-annotations-6.0.6.Final.jar spr
+ ing-data-commons-3.1.0.jar jackson-core-2.15.0.jar spring-core-6.0.9.ja
+ r spring-orm-6.0.9.jar spring-security-core-6.1.0.jar micrometer-observ
+ ation-1.11.0.jar snakeyaml-1.33.jar spring-data-jpa-3.1.0.jar log4j-to-
+ slf4j-2.20.0.jar micrometer-commons-1.11.0.jar attoparser-2.0.6.RELEASE
+ .jar HikariCP-5.0.1.jar jakarta.annotation-api-2.1.1.jar slf4j-api-2.0.
+ 7.jar checker-qual-3.31.0.jar istack-commons-runtime-4.1.1.jar spring-b
+ oot-starter-validation-3.1.0.jar spring-security-web-6.1.0.jar jackson-
+ datatype-jsr310-2.15.0.jar tomcat-embed-core-10.1.8.jar commons-text-1.
+ 10.0.jar spring-context-6.0.9.jar commons-lang3-3.12.0.jar spring-boot-
+ starter-logging-3.1.0.jar logback-core-1.4.7.jar
 
